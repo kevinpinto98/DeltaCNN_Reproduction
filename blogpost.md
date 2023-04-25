@@ -1,4 +1,4 @@
-# DelatCNN: End-to-End CNN Inference of Sparse Frame Differences in Videos
+# DeltaCNN: End-to-End CNN Inference of Sparse Frame Differences in Videos
 
 ***Group***: 48
 ***Members***:
@@ -7,10 +7,10 @@
 * Andrei Popovici (5853060): Setting up the pose-resnet architecture, tried to download the Human3.6M dataset and tried to get the DeltaCNN framework working
 
 This project was done in part to satisfy the requirements for the course ***Deep Learning (CS4240)*** at TU Delft.
-We were tasked with reproducing the results of the paper ***"DelatCNN: End-to-End CNN Inference of Sparse Frame Differences in Videos"***. In this blog we'll be elaborating on our efforts to reproduce the results, the issues we faced and the alternate experiments we conducted with the ResNet-18 architecture and the CIFAR-100 dataset. 
+We were tasked with reproducing the results of the paper ***"DeltaCNN: End-to-End CNN Inference of Sparse Frame Differences in Videos"***. In this blog we'll be elaborating on our efforts to reproduce the results, the issues we faced and the alternate experiments we conducted with the ResNet-18 architecture and the CIFAR-100 dataset. 
 
 ## Introduction
-DeltaCNN is a framework that aims to provide sparse implmentation for all CNN layers and enable sparse frame-by-frame updates to accelerate video inference with minimal loss in accuracy.
+DeltaCNN is a framework that aims to provide sparse implementation for all CNN layers and enable sparse frame-by-frame updates to accelerate video inference with minimal loss in accuracy.
 
 It mainly exploits the fact that a large number of video frames typically change very little and hence by skipping identical image regions we can reduce the computational resources utilized to perform CNN inference on video data. The way it works is that intermediate feature maps from previous frames are cached in order to accelerate the inference of new frames by processing the updated pixels.
 
